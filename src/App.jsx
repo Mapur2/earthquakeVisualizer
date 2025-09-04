@@ -8,13 +8,11 @@ function App() {
   const [dark, setDark] = useState(false)
   const [showHeatmap, setShowHeatmap] = useState(false)
 
-  const headerTitle = useMemo(() => 'Earthquake Visualizer', [])
-
   return (
     <div className="min-h-screen flex flex-col">
       <header className="p-4 shadow-md bg-white z-10">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row sm:items-center gap-4">
-          <h1 className="text-2xl font-semibold">{headerTitle}</h1>
+          <h1 className="text-2xl font-semibold">Earthquake Visualizer <span className="text-sm text-gray-500"><a href="https://github.com/Mapur2">By Rupam Modak</a></span> </h1>
           <div className="flex-1" />
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
@@ -27,7 +25,6 @@ function App() {
               >
                 <option value="day">Past Day</option>
                 <option value="week">Past Week</option>
-                <option value="month">Past Month</option>
               </select>
             </div>
             <label className="inline-flex items-center gap-2 cursor-pointer select-none text-sm">
